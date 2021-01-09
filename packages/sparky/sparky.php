@@ -133,30 +133,39 @@ class PlgEditorSparky extends CMSPlugin
 		}
 
 
+    // get the default template for the site application
+
+    $query = $db->getQuery(true)
+      ->select('template')
+      ->from('#__template_styles')
+      ->where('client_id=0 AND home=' . $db->quote('1'));
+
+    $db->setQuery($query);
+
+    try
+    {
+      $template = $db->loadResult();
+    }
+    catch (RuntimeException $e)
+    {
+      $app->enqueueMessage(JText::_('JERROR_AN_ERROR_HAS_OCCURRED'), 'error');
+
+      return '';
+    }
+
+    $templates_path = JPATH_SITE . '/templates';
+
+    $wa->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
+       ->registerAndUseStyle($template, 'templates/'.$template.'/css/editor.css')
+       ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
+       ->registerAndUseScript('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.js');
+
+
 		// // Add assets
 		// $wa->registerAndUseStyle('plg_editors_sparky', 'plugins/editors/sparky/css/sparky_editor.css')
 		//    ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
 		//    ->registerAndUseScript('plg_editors_sparky', 'plugins/editors/sparky/js/sparky_editor.js')
 		// ;
-
-		// Add assets
-		$wa->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
-		   ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
-		   ->registerAndUseScript('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.js')
-		;
-
-		// Only add "px" to width and height if they are not given as a percentage
-		if (is_numeric($width))
-		{
-			$width .= 'px';
-		}
-
-		if (is_numeric($height))
-		{
-			$height .= 'px';
-		}
-
-		$readonly = !empty($params['readonly']) ? ' readonly disabled' : '';
 
 		// Factory::getDocument()->getWebAssetManager()
 		// 	->registerAndUseScript(
@@ -170,9 +179,10 @@ class PlgEditorSparky extends CMSPlugin
 		// 		['webcomponent' => true]
 		// 	);
 
+    
+
 		$editor = '<div class="js-editor-sparky">'
-			. '<textarea id="sparkyEditorTextarea" name="' . $name . '" id="' . $id . '" cols="' . $col . '" rows="' . $row
-			. '" style="width: ' . $width . '; height: ' . $height . ';"' . $readonly . '>'
+			. '<textarea id="sparkyEditorTextarea" name="' . $name . '">'
 			. $content
 			. '</textarea>'
 			. '<div id="sparkyPageContentEditable"></div>'
