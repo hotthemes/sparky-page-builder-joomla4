@@ -183,6 +183,9 @@ a.column_decrease::before {
     text-shadow: 1px 1px 0 #fff;
     content: "\f78c";
 }
+a.column_increase, a.column_decrease {
+    transform: rotate(45deg);
+}
 a.column_left::before {
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
