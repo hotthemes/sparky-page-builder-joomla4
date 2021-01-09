@@ -133,17 +133,17 @@ class PlgEditorSparky extends CMSPlugin
 		}
 
 
-		// Add assets
-		$wa->registerAndUseStyle('plg_editors_sparky', 'plugins/editors/sparky/css/sparky_editor.css')
-		   ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
-		   ->registerAndUseScript('plg_editors_sparky', 'plugins/editors/sparky/js/sparky_editor.js')
-		;
-
 		// // Add assets
-		// $wa->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
+		// $wa->registerAndUseStyle('plg_editors_sparky', 'plugins/editors/sparky/css/sparky_editor.css')
 		//    ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
-		//    ->registerAndUseScript('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.js')
+		//    ->registerAndUseScript('plg_editors_sparky', 'plugins/editors/sparky/js/sparky_editor.js')
 		// ;
+
+		// Add assets
+		$wa->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
+		   ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
+		   ->registerAndUseScript('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.js')
+		;
 
 		// Only add "px" to width and height if they are not given as a percentage
 		if (is_numeric($width))

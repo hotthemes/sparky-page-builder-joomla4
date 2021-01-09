@@ -36,20 +36,15 @@ class plgContentSparkyEditor extends JPlugin
 		$wa  = $doc->getWebAssetManager();
 
 		// Add assets
-		$wa->registerAndUseStyle('plg_content_sparkyeditor', 'plugins/content/sparkyeditor/css/sparky_frontend.css')
-		   ->registerAndUseScript('plg_content_sparkyeditor', 'plugins/content/sparkyeditor/js/sparky_frontend.js')
+		$wa->registerAndUseStyle('plg_content_sparkyeditor', 'plg_editors_sparky/sparky_frontend.css')
+		   ->registerAndUseScript('plg_content_sparkyeditor', 'plg_editors_sparky/sparky_frontend.js')
 		;
 
 		// allow multiple galleries on a page
 		$UniqueNo = rand();
 		
-		// style declaration
-		$doc->addStyleDeclaration( '
-
-			#responsivelightbox'.$UniqueNo.' {
-			}
-
-		' );
+		// inline style declaration
+		$doc->addStyleDeclaration( '' );
 		
 	}
 }
