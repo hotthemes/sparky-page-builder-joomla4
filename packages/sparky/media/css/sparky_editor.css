@@ -15,12 +15,12 @@ body {
 .page_row.row_full_width {
     max-width: 100%;
 }
-.page_container {
+.sparky_page_container {
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
 }
-.row_full_width.row_fluid .page_container {
+.row_full_width.row_fluid .sparky_page_container {
     max-width: 100%;
 }
 .sparkle1 {
