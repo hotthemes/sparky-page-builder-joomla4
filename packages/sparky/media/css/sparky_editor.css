@@ -753,6 +753,13 @@ input#row_background_image, input#column_background_image, input#heading_link, i
     width: 96%;
 }
 
+/* Modal color picker */
+
+.sparky_modal-content .minicolors-theme-bootstrap .minicolors-swatch {
+    width: 22px;
+    height: 22px;
+}
+
 /* Animation */
 
 @keyframes animatetop {

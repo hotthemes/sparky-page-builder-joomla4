@@ -155,9 +155,11 @@ class PlgEditorSparky extends CMSPlugin
 
     $templates_path = JPATH_SITE . '/templates';
 
-    $wa->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
+    $wa->registerAndUseStyle('minicolors', 'vendor/minicolors/jquery.minicolors.css')
+       ->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
        ->registerAndUseStyle($template, 'templates/'.$template.'/css/editor.css')
        ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
+       ->registerAndUseScript('minicolors', 'vendor/minicolors/jquery.minicolors.min.js')
        ->registerAndUseScript('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.js');
 
 
@@ -229,7 +231,7 @@ class PlgEditorSparky extends CMSPlugin
             <label><input type="checkbox" name="row_full_width" id="row_full_width"> Full Width</label>
             <label><input type="checkbox" name="row_fluid" id="row_fluid"> Fluid Row</label>
             <label></label>
-            <label>Background Color <input type="text" name="row_background_color" id="row_background_color" placeholder="i.e. #FF9933"></label>
+            <label>Background Color<br><input type="text" name="row_background_color" id="row_background_color" placeholder="i.e. #FF9933"></label>
             <label>Background Image <input type="text" name="row_background_image" id="row_background_image" placeholder="i.e. images/image.png"></label>
             <label>Background Image Repeat:
                 <select id="row_background_image_repeat">
@@ -315,7 +317,7 @@ class PlgEditorSparky extends CMSPlugin
       </div>
       <div class="sparky_modal-body">
         <form>
-            <label>Background Color <input type="text" name="column_background_color" id="column_background_color" placeholder="ex: #FF9933"></label>
+            <label>Background Color<br><input type="text" name="column_background_color" id="column_background_color" placeholder="ex: #FF9933"></label>
             <label>Background Image <input type="text" name="column_background_image" id="column_background_image" placeholder="i.e. images/image.png"></label>
             <label>Background Image Repeat:
                 <select id="column_background_image_repeat">
@@ -415,7 +417,7 @@ class PlgEditorSparky extends CMSPlugin
             <label>Paragraph ID <input id="paragraph_id" type="text" name="paragraph_id" placeholder="i.e. myBlock"></label>
             <label>Paragraph Class <input id="paragraph_class" type="text" name="paragraph_class" placeholder="i.e. myClass"></label>
             <label></label>
-            <label>Text Color <input id="paragraph_color" type="text" name="paragraph_color" placeholder="i.e. #FF9933"></label>
+            <label>Text Color<br><input id="paragraph_color" type="text" name="paragraph_color" placeholder="i.e. #FF9933"></label>
             <label>Font Size
                 <select id="paragraph_font_size">
                     <option value="has-small-font-size">Small</option>
@@ -473,7 +475,7 @@ class PlgEditorSparky extends CMSPlugin
                     <option value="blank">New Window</option>
                 </select>
             </label>
-            <label>Color <input id="heading_color" type="text" name="heading_color" placeholder="i.e. #FF9933"></label>
+            <label>Color<br><input id="heading_color" type="text" name="heading_color" placeholder="i.e. #FF9933"></label>
             <label>Heading Align
                 <select id="heading_text_align">
                     <option value="normal">None</option>
@@ -545,7 +547,7 @@ class PlgEditorSparky extends CMSPlugin
             <label>Separator ID <input id="separator_id" type="text" name="separator_id" placeholder="i.e. myBlock"></label>
             <label>Separator Class <input id="separator_class" type="text" name="separator_class" placeholder="i.e. myClass"></label>
             <label></label>
-            <label>Color <input id="separator_color" type="text" name="separator_color" placeholder="i.e. #FF9933"></label>
+            <label>Color<br><input id="separator_color" type="text" name="separator_color" placeholder="i.e. #FF9933"></label>
             <label>Height <input id="separator_height" type="text" name="separator_height" placeholder="i.e. 3px"></label>
         </form>
       </div>
@@ -618,10 +620,10 @@ class PlgEditorSparky extends CMSPlugin
                 </select>
             </label>
             <label>Custom Font Size <input id="button_custom_font_size" type="text" name="button_custom_font_size" placeholder="i.e. 14px"></label>
-            <label>Text Color <input id="button_text_color" type="text" name="button_text_color" placeholder="i.e. #FF9933"></label>
-            <label>Background Color <input id="button_background_color" type="text" name="button_background_color" placeholder="i.e. #FF9933"></label>
+            <label>Text Color<br><input id="button_text_color" type="text" name="button_text_color" placeholder="i.e. #FF9933"></label>
+            <label>Background Color<br><input id="button_background_color" type="text" name="button_background_color" placeholder="i.e. #FF9933"></label>
             <label>Border Width <input id="button_border_width" type="text" name="button_border_width" placeholder="i.e. 3px"></label>
-            <label>Border Color <input id="button_border_color" type="text" name="button_border_color" placeholder="i.e. #FF9933"></label>
+            <label>Border Color<br><input id="button_border_color" type="text" name="button_border_color" placeholder="i.e. #FF9933"></label>
             <label>Border Radius <input id="button_border_radius" type="text" name="button_border_radius" placeholder="i.e. 5px"></label>
         </form>
       </div>
@@ -650,7 +652,7 @@ class PlgEditorSparky extends CMSPlugin
                     <option value="ol">OL (Ordered List)</option>
                 </select>
             </label>
-            <label>Text Color <input id="list_color" type="text" name="list_color" placeholder="i.e. #FF9933"></label>
+            <label>Text Color<br><input id="list_color" type="text" name="list_color" placeholder="i.e. #FF9933"></label>
             <label>Font Size
                 <select id="list_font_size">
                     <option value="has-small-font-size">Small</option>
@@ -698,7 +700,7 @@ class PlgEditorSparky extends CMSPlugin
                 </select>
             </label>
             <label>Icon Name <input id="icon_class" type="text" name="icon_class" placeholder="i.e. check-circle"></label>
-            <label>Color <input id="icon_color" type="text" name="icon_color" placeholder="i.e. #FF9933"></label>
+            <label>Color<br><input id="icon_color" type="text" name="icon_color" placeholder="i.e. #FF9933"></label>
             <label>Size <input id="icon_size" type="text" name="icon_size" placeholder="i.e. 30px"></label>
             <label>Icon Align
                 <select id="icon_align">
@@ -850,7 +852,7 @@ class PlgEditorSparky extends CMSPlugin
                 </select>
             </label>
             <label>Icons Size <input id="social_size" type="text" name="social_size" placeholder="i.e. 30px"></label>
-            <label>Color <input id="social_color" type="text" name="social_color" placeholder="i.e. #FF9933"></label>
+            <label>Color<br><input id="social_color" type="text" name="social_color" placeholder="i.e. #FF9933"></label>
             <label>Links Targets
                 <select id="social_target">
                     <option value="normal">Normal</option>
