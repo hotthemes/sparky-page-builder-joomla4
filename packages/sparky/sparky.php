@@ -13,6 +13,7 @@ use Joomla\CMS\Factory;
 use Joomla\CMS\Layout\LayoutHelper;
 use Joomla\CMS\Plugin\CMSPlugin;
 use Joomla\Event\Event;
+use Joomla\CMS\Uri\Uri;
 
 /**
  * Plain Textarea Editor Plugin
@@ -114,6 +115,7 @@ class PlgEditorSparky extends CMSPlugin
 		$doc = Factory::getApplication()->getDocument();
 		$wa  = $doc->getWebAssetManager();
 
+    $uri = Uri::getInstance();
 
 		// get all Joomla modules
 
@@ -156,6 +158,7 @@ class PlgEditorSparky extends CMSPlugin
     $templates_path = JPATH_SITE . '/templates';
 
     $wa->registerAndUseStyle('minicolors', 'vendor/minicolors/jquery.minicolors.css')
+       //->registerAndUseStyle('media', 'system/fields/joomla-field-media.min.css')
        ->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
        ->registerAndUseStyle($template, 'templates/'.$template.'/css/editor.css')
        ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
@@ -230,9 +233,53 @@ class PlgEditorSparky extends CMSPlugin
             <label></label>
             <label><input type="checkbox" name="row_full_width" id="row_full_width"> Full Width</label>
             <label><input type="checkbox" name="row_fluid" id="row_fluid"> Fluid Row</label>
-            <label></label>
+            <div>Background Image</div>
+            <joomla-field-media class="field-media-wrapper"
+              type="image"
+              base-path="'.JURI :: root().'"
+              root-folder="images"
+              url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/"
+              modal-container=".modal"
+              modal-width="100%"
+              modal-height="400px"
+              input=".field-media-input"
+              button-select=".button-select"
+              button-clear=".button-clear"
+              button-save-selected=".button-save-selected"
+              preview="static"
+              preview-container=".field-media-preview"
+              preview-width="200"
+              preview-height="200">
+              <div id="row_background_image_wrapper" role="dialog" tabindex="-1" class="joomla-modal modal fade" data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=89&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" data-iframe="&lt;iframe class=&quot;iframe&quot; src=&quot;/joomla4editorbeta6/administrator/index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot; name=&quot;Change Image&quot; title=&quot;Change Image&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;">
+                <div class="modal-dialog modal-lg jviewport-width100">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title">Change Image</h3>
+                      <button type="button" class="close novalidate" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body jviewport-height60">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary button-save-selected">Select</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group">
+                <input type="text" name="row_background_image" id="row_background_image" value="" readonly="readonly" class="form-control field-media-input">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-secondary button-select">Select</button>
+                  <button type="button" class="btn btn-secondary button-clear">
+                    <span class="icon-times" aria-hidden="true"></span>
+                    <span class="sr-only">Clear</span>
+                  </button>
+                </div>
+              </div>
+            </joomla-field-media>
             <label>Background Color<br><input type="text" name="row_background_color" id="row_background_color" placeholder="i.e. #FF9933"></label>
-            <label>Background Image <input type="text" name="row_background_image" id="row_background_image" placeholder="i.e. images/image.png"></label>
             <label>Background Image Repeat:
                 <select id="row_background_image_repeat">
                     <option value="">Repeat</option>
@@ -267,6 +314,7 @@ class PlgEditorSparky extends CMSPlugin
                     <option value="fixed">Fixed</option>
                 </select>
             </label>
+            <label></label>
             <label>Margin:<br>
                 <input type="text" name="row_margin_top" id="row_margin_top" class="input_inline" size="6" placeholder="Top">
                 <input type="text" name="row_margin_bottom" id="row_margin_bottom" class="input_inline" size="6" placeholder="Bottom">
@@ -317,8 +365,53 @@ class PlgEditorSparky extends CMSPlugin
       </div>
       <div class="sparky_modal-body">
         <form>
+            <div>Background Image</div>
+            <joomla-field-media class="field-media-wrapper"
+              type="image"
+              base-path="'.JURI :: root().'"
+              root-folder="images"
+              url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/"
+              modal-container=".modal"
+              modal-width="100%"
+              modal-height="400px"
+              input=".field-media-input"
+              button-select=".button-select"
+              button-clear=".button-clear"
+              button-save-selected=".button-save-selected"
+              preview="static"
+              preview-container=".field-media-preview"
+              preview-width="200"
+              preview-height="200">
+              <div id="column_background_image_wrapper" role="dialog" tabindex="-1" class="joomla-modal modal fade" data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=89&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" data-iframe="&lt;iframe class=&quot;iframe&quot; src=&quot;/joomla4editorbeta6/administrator/index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot; name=&quot;Change Image&quot; title=&quot;Change Image&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;">
+                <div class="modal-dialog modal-lg jviewport-width100">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title">Change Image</h3>
+                      <button type="button" class="close novalidate" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body jviewport-height60">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary button-save-selected">Select</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group">
+                <input type="text" name="column_background_image" id="column_background_image" value="" readonly="readonly" class="form-control field-media-input">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-secondary button-select">Select</button>
+                  <button type="button" class="btn btn-secondary button-clear">
+                    <span class="icon-times" aria-hidden="true"></span>
+                    <span class="sr-only">Clear</span>
+                  </button>
+                </div>
+              </div>
+            </joomla-field-media>
             <label>Background Color<br><input type="text" name="column_background_color" id="column_background_color" placeholder="ex: #FF9933"></label>
-            <label>Background Image <input type="text" name="column_background_image" id="column_background_image" placeholder="i.e. images/image.png"></label>
             <label>Background Image Repeat:
                 <select id="column_background_image_repeat">
                     <option value="">Repeat</option>
@@ -506,7 +599,52 @@ class PlgEditorSparky extends CMSPlugin
             <label>Image ID <input id="image_id" type="text" name="image_id" placeholder="i.e. myBlock"></label>
             <label>Image Class <input id="image_class" type="text" name="image_class" placeholder="i.e. myClass"></label>
             <label></label>
-            <label>Source <input id="image_src" type="text" name="image_src" placeholder="i.e. images/image.png"></label>
+            <div>Source</div>
+            <joomla-field-media class="field-media-wrapper"
+              type="image"
+              base-path="'.JURI :: root().'"
+              root-folder="images"
+              url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/"
+              modal-container=".modal"
+              modal-width="100%"
+              modal-height="400px"
+              input=".field-media-input"
+              button-select=".button-select"
+              button-clear=".button-clear"
+              button-save-selected=".button-save-selected"
+              preview="static"
+              preview-container=".field-media-preview"
+              preview-width="200"
+              preview-height="200">
+              <div id="image_src_wrapper" role="dialog" tabindex="-1" class="joomla-modal modal fade" data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=89&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" data-iframe="&lt;iframe class=&quot;iframe&quot; src=&quot;/joomla4editorbeta6/administrator/index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot; name=&quot;Change Image&quot; title=&quot;Change Image&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;">
+                <div class="modal-dialog modal-lg jviewport-width100">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title">Change Image</h3>
+                      <button type="button" class="close novalidate" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body jviewport-height60">
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary button-save-selected">Select</button>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="input-group">
+                <input type="text" name="image_src" id="image_src" value="" readonly="readonly" class="form-control field-media-input">
+                <div class="input-group-append">
+                  <button type="button" class="btn btn-secondary button-select">Select</button>
+                  <button type="button" class="btn btn-secondary button-clear">
+                    <span class="icon-times" aria-hidden="true"></span>
+                    <span class="sr-only">Clear</span>
+                  </button>
+                </div>
+              </div>
+            </joomla-field-media>
             <label>Alt Text <input id="image_alt" type="text" name="image_alt" placeholder="Image description"></label>
             <label>Image Align
                 <select id="image_align">
@@ -523,7 +661,6 @@ class PlgEditorSparky extends CMSPlugin
                     <option value="blank">New Window</option>
                 </select>
             </label>
-            <label></label>
             <label>Width <input id="image_width" type="text" name="image_width" placeholder="i.e. 150px"></label>
             <label>Height <input id="image_height" type="text" name="image_height" placeholder="i.e. 150px"></label>
         </form>
