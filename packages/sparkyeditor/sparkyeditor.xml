@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="1.6" type="plugin" group="content">
-    <name>Content - Sparky Editor</name>
+    <name>Content - Sparky Content Plugin</name>
     <author>HotThemes</author>
     <creationDate>January 2021</creationDate>
     <copyright>Copyright 2021 by HotThemes.</copyright>
