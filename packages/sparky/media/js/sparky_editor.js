@@ -722,7 +722,7 @@ function createEditableContentFromArray(arr) {
                             let audioLoop = "";
                             let audioMuted = "";
                             // problem with audio only:
-                            // joomla reverts src to abs - wrong urls (in administratoe only) after article save
+                            // joomla reverts src to abs - wrong urls (in administrator only) after article save
                             if (block.mp3) {
                                 if (block.mp3.startsWith("http")) {
                                     audioMp3 = `<source src="${block.mp3}" type="audio/mpeg">`;
@@ -1551,8 +1551,8 @@ function sparkyEditorButtonsEvents() {
         button.addEventListener("click", function(event) {
 
             if ( window.getSelection().baseNode ) {
-                // check if selection is inside existing link
-                if ( window.getSelection().baseNode.parentNode.nodeName === "A" ) {
+                // check if selection is inside existing link, and existing link is in paragraph
+                if ( window.getSelection().baseNode.parentNode.nodeName === "A" && window.getSelection().baseNode.parentNode.parentNode.nodeName === "P" ) {
                     sparky_modal( "add_link_modal" );
                 } else {
                     // open modal if some text is selected
