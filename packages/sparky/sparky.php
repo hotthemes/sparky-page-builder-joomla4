@@ -327,6 +327,7 @@ class PlgEditorSparky extends CMSPlugin
                 <input type="text" name="row_padding_left" id="row_padding_left" class="input_inline" size="6" placeholder="Left">
                 <input type="text" name="row_padding_right" id="row_padding_right" class="input_inline" size="6" placeholder="Right">
             </label>
+            <label></label>
             <label>Columns on Tablet:
                 <select id="row_columns_tablet">
                     <option value="">Auto</option>
