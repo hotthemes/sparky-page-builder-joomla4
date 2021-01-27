@@ -33,18 +33,23 @@ class plgContentSparkyEditor extends JPlugin
 
 		/** @var HtmlDocument $doc */
 		$doc = Factory::getApplication()->getDocument();
+		$lang = Factory::getApplication()->getLanguage();
+		$direction = $lang->get('rtl');
 		$wa  = $doc->getWebAssetManager();
 
 		// Add assets
 		$wa->registerAndUseStyle('plg_content_sparkyeditor', 'plg_editors_sparky/sparky_frontend.css')
 		   ->registerAndUseScript('plg_content_sparkyeditor', 'plg_editors_sparky/sparky_frontend.js')
 		;
-
-		// allow multiple galleries on a page
-		$UniqueNo = rand();
 		
 		// inline style declaration
-		$doc->addStyleDeclaration( '' );
+		if ($direction) {
+			$doc->addStyleDeclaration( '
+.sparky_page_container {
+	flex-direction: row-reverse;
+}
+			' );
+		}
 		
 	}
 }
