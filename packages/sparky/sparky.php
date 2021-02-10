@@ -246,37 +246,37 @@ class PlgEditorSparky extends CMSPlugin
           button-select=".button-select"
           button-clear=".button-clear"
           button-save-selected=".button-save-selected"
-          preview="static"
-          preview-container=".field-media-preview"
-          preview-width="200"
-          preview-height="200">
-          <div id="row_background_image_wrapper" role="dialog" tabindex="-1" class="joomla-modal modal fade" data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=89&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" data-iframe="&lt;iframe class=&quot;iframe&quot; src=&quot;/joomla4editorbeta6/administrator/index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot; name=&quot;Change Image&quot; title=&quot;Change Image&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;">
+          preview="static">
+          <div id="imageModal_jform_images_image_intro"
+            tabindex="-1"
+            class="joomla-modal modal fade"
+            data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/"
+            data-iframe="<iframe class=&quot;iframe&quot; src=&quot;index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;amp;asset=&amp;amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot;
+            name=&quot;Change Image&quot;
+            title=&quot;Change Image&quot;
+            height=&quot;100%&quot;
+            width=&quot;100%&quot;></iframe>"
+            style="display: none;"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg jviewport-width100">
               <div class="modal-content">
                 <div class="modal-header">
                   <h3 class="modal-title">Change Image</h3>
-                  <button type="button" class="close novalidate" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                  <button type="button" class="btn-close novalidate" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body jviewport-height60">
+                <div class="modal-body jviewport-height60" style="max-height: initial;">
+                  <iframe class="iframe" src="index.php?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" name="Change Image" title="Change Image" height="100%" width="100%"></iframe>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary button-save-selected">Select</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-secondary button-save-selected">Select</button><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="input-group">
             <input type="text" name="row_background_image" id="row_background_image" value="" readonly="readonly" class="form-control field-media-input">
-            <div class="input-group-append">
-              <button type="button" class="btn btn-secondary button-select">Select</button>
-              <button type="button" class="btn btn-secondary button-clear">
-                <span class="icon-times" aria-hidden="true"></span>
-                <span class="sr-only">Clear</span>
-              </button>
-            </div>
+            <button type="button" class="btn btn-secondary button-select">Select</button>
+            <button type="button" class="btn btn-secondary button-clear"><span class="icon-times" aria-hidden="true"></span><span class="visually-hidden">Clear</span></button>
           </div>
         </joomla-field-media>
         <label>Background Color<br><input type="text" name="row_background_color" id="row_background_color" placeholder="i.e. #FF9933"></label>
@@ -397,37 +397,37 @@ class PlgEditorSparky extends CMSPlugin
           button-select=".button-select"
           button-clear=".button-clear"
           button-save-selected=".button-save-selected"
-          preview="static"
-          preview-container=".field-media-preview"
-          preview-width="200"
-          preview-height="200">
-          <div id="column_background_image_wrapper" role="dialog" tabindex="-1" class="joomla-modal modal fade" data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=89&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" data-iframe="&lt;iframe class=&quot;iframe&quot; src=&quot;/joomla4editorbeta6/administrator/index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot; name=&quot;Change Image&quot; title=&quot;Change Image&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;">
+          preview="static">
+          <div id="imageModal_jform_images_image_intro"
+            tabindex="-1"
+            class="joomla-modal modal fade"
+            data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/"
+            data-iframe="<iframe class=&quot;iframe&quot; src=&quot;index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;amp;asset=&amp;amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot;
+            name=&quot;Change Image&quot;
+            title=&quot;Change Image&quot;
+            height=&quot;100%&quot;
+            width=&quot;100%&quot;></iframe>"
+            style="display: none;"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg jviewport-width100">
               <div class="modal-content">
                 <div class="modal-header">
                   <h3 class="modal-title">Change Image</h3>
-                  <button type="button" class="close novalidate" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                  <button type="button" class="btn-close novalidate" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body jviewport-height60">
+                <div class="modal-body jviewport-height60" style="max-height: initial;">
+                  <iframe class="iframe" src="index.php?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" name="Change Image" title="Change Image" height="100%" width="100%"></iframe>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary button-save-selected">Select</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-secondary button-save-selected">Select</button><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="input-group">
             <input type="text" name="column_background_image" id="column_background_image" value="" readonly="readonly" class="form-control field-media-input">
-            <div class="input-group-append">
-              <button type="button" class="btn btn-secondary button-select">Select</button>
-              <button type="button" class="btn btn-secondary button-clear">
-                <span class="icon-times" aria-hidden="true"></span>
-                <span class="sr-only">Clear</span>
-              </button>
-            </div>
+            <button type="button" class="btn btn-secondary button-select">Select</button>
+            <button type="button" class="btn btn-secondary button-clear"><span class="icon-times" aria-hidden="true"></span><span class="visually-hidden">Clear</span></button>
           </div>
         </joomla-field-media>
         <label>Background Color<br><input type="text" name="column_background_color" id="column_background_color" placeholder="ex: #FF9933"></label>
@@ -635,37 +635,37 @@ class PlgEditorSparky extends CMSPlugin
           button-select=".button-select"
           button-clear=".button-clear"
           button-save-selected=".button-save-selected"
-          preview="static"
-          preview-container=".field-media-preview"
-          preview-width="200"
-          preview-height="200">
-          <div id="image_src_wrapper" role="dialog" tabindex="-1" class="joomla-modal modal fade" data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=89&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" data-iframe="&lt;iframe class=&quot;iframe&quot; src=&quot;/joomla4editorbeta6/administrator/index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot; name=&quot;Change Image&quot; title=&quot;Change Image&quot; height=&quot;100%&quot; width=&quot;100%&quot;&gt;&lt;/iframe&gt;">
+          preview="static">
+          <div id="imageModal_jform_images_image_intro"
+            tabindex="-1"
+            class="joomla-modal modal fade"
+            data-url="'.$uri->getPath().'?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/"
+            data-iframe="<iframe class=&quot;iframe&quot; src=&quot;index.php?option=com_media&amp;amp;view=media&amp;amp;tmpl=component&amp;amp;asset=&amp;amp;author=&amp;amp;fieldid={field-media-id}&amp;amp;path=local-0:/&quot;
+            name=&quot;Change Image&quot;
+            title=&quot;Change Image&quot;
+            height=&quot;100%&quot;
+            width=&quot;100%&quot;></iframe>"
+            style="display: none;"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg jviewport-width100">
               <div class="modal-content">
                 <div class="modal-header">
                   <h3 class="modal-title">Change Image</h3>
-                  <button type="button" class="close novalidate" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
+                  <button type="button" class="btn-close novalidate" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body jviewport-height60">
+                <div class="modal-body jviewport-height60" style="max-height: initial;">
+                  <iframe class="iframe" src="index.php?option=com_media&amp;view=media&amp;tmpl=component&amp;asset=&amp;author=&amp;fieldid={field-media-id}&amp;path=local-0:/" name="Change Image" title="Change Image" height="100%" width="100%"></iframe>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary button-save-selected">Select</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  <button type="button" class="btn btn-secondary button-save-selected">Select</button><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
               </div>
             </div>
           </div>
           <div class="input-group">
             <input type="text" name="image_src" id="image_src" value="" readonly="readonly" class="form-control field-media-input">
-            <div class="input-group-append">
-              <button type="button" class="btn btn-secondary button-select">Select</button>
-              <button type="button" class="btn btn-secondary button-clear">
-                <span class="icon-times" aria-hidden="true"></span>
-                <span class="sr-only">Clear</span>
-              </button>
-            </div>
+            <button type="button" class="btn btn-secondary button-select">Select</button>
+            <button type="button" class="btn btn-secondary button-clear"><span class="icon-times" aria-hidden="true"></span><span class="visually-hidden">Clear</span></button>
           </div>
         </joomla-field-media>
         <label>Alt Text <input id="image_alt" type="text" name="image_alt" placeholder="Image description"></label>
