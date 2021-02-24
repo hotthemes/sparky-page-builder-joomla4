@@ -187,7 +187,8 @@ class PlgEditorSparky extends CMSPlugin
 
     
 
-		$editor = '<div class="js-editor-sparky">'
+		$editor = '<script>var joomla_path = "'.JURI :: root().'";</script>'
+      . '<div class="js-editor-sparky">'
 			. '<textarea id="sparkyEditorTextarea" name="' . $name . '">'
 			. $content
 			. '</textarea>'
