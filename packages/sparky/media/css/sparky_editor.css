@@ -840,3 +840,105 @@ body.com_content section#general .col-lg-9 .card-body {
 #sparkyEditorTextarea, label#jform_articletext-lbl {
     display: none;
 }
+
+/* Front-end editing */
+
+.edit form#adminForm {
+    width: calc(100vw - var(--scrollbar-width));
+    position: absolute;
+    overflow: hidden;
+    background: #fff;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+}
+
+.edit form#adminForm .sparky_page_row:not(.row_full_width) {
+    margin: 0 auto;
+}
+
+.edit form#adminForm ul[role="tablist"] {
+    margin-bottom: 30px;
+}
+
+.edit form#adminForm ul[role="tablist"] li {
+    margin: 0;
+}
+
+.edit form#adminForm #editor > .control-group:first-child,
+.edit form#adminForm #publishing > .control-group,
+.edit form#adminForm #language > .control-group,
+.edit form#adminForm #metadata > .control-group,
+.edit form#adminForm > .btn-toolbar {
+    max-width: 1200px;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+.edit form#adminForm .control-group label {
+    display: inline-block;
+}
+
+.edit form#adminForm button.btn,
+button.choices__button_joomla {
+    background: #f5f5f5;
+    color: #333;
+    line-height: 38px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+}
+
+.edit form#adminForm button.btn:hover {
+    color: #333 !important;
+    background: #ccc;
+}
+
+button.choices__button_joomla {
+    margin: 0 15px;
+}
+
+.edit form#adminForm section {
+    border: 0;
+    padding: 0;
+}
+
+.edit form#adminForm > div {
+    max-width: 1200px;
+    margin: 0 auto 50px !important;
+}
+
+.icon-check::before {
+    content: "\f00c";
+}
+
+.icon-times::before {
+    content: "\f00d";
+}
+
+.icon-code-branch::before {
+    content: "\f07b";
+}
+
+.icon-calendar::before {
+    content: "\f133";
+}
+
+.edit form#adminForm button.btn.btn-primary {
+    background-color: #46a546;
+    border: 1px solid #378137;
+    color: #fff;
+}
+
+.edit form#adminForm button.btn.btn-primary:hover {
+    background-color: #2f6f2f;
+    color: #fff !important;
+}
+
+.edit form#adminForm .form-select,
+.edit form#adminForm .field-calendar {
+    max-width: 300px;
+}
+
+.js-calendar.hidden {
+    display: none;
+}

@@ -163,8 +163,7 @@ class PlgEditorSparky extends CMSPlugin
        ->registerAndUseStyle($template, 'templates/'.$template.'/css/editor.css')
        ->registerAndUseScript('jquery', 'vendor/jquery/jquery.min.js')
        ->registerAndUseScript('plg_editors_none', 'plg_editors_none/joomla-editor-none.min.js')
-       ->registerAndUseScript('minicolors', 'vendor/minicolors/jquery.minicolors.min.js')
-       ->registerAndUseScript('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.js');
+       ->registerAndUseScript('minicolors', 'vendor/minicolors/jquery.minicolors.min.js');
 
 
 		// // Add assets
@@ -187,8 +186,7 @@ class PlgEditorSparky extends CMSPlugin
 
     
 
-		$editor = '<script>var joomla_path = "'.JURI :: root().'";</script>'
-      . '<div class="js-editor-sparky">'
+		$editor = '<div class="js-editor-sparky">'
 			. '<textarea id="sparkyEditorTextarea" name="' . $name . '">'
 			. $content
 			. '</textarea>'
@@ -235,6 +233,7 @@ class PlgEditorSparky extends CMSPlugin
         <label><input type="checkbox" name="row_full_width" id="row_full_width"> Full Width</label>
         <label><input type="checkbox" name="row_fluid" id="row_fluid"> Fluid Row</label>
         <div>Background Image</div>
+        <p style="font-size:13px;">To use this in front-end, enable option Content > Articles > Options > Editing Layout > "Frontend Images and Links"</p>
         <joomla-field-media class="field-media-wrapper"
           type="image"
           base-path="'.JURI :: root().'"
@@ -386,6 +385,7 @@ class PlgEditorSparky extends CMSPlugin
       </div>
       <div class="sparky_modal-body">
         <div>Background Image</div>
+        <p style="font-size:13px;">To use this in front-end, enable option Content > Articles > Options > Editing Layout > "Frontend Images and Links"</p>
         <joomla-field-media class="field-media-wrapper"
           type="image"
           base-path="'.JURI :: root().'"
@@ -624,6 +624,7 @@ class PlgEditorSparky extends CMSPlugin
         <label>Image Class <input id="image_class" type="text" name="image_class" placeholder="i.e. myClass"></label>
         <label></label>
         <div>Source</div>
+        <p style="font-size:13px;">To use this in front-end, enable option Content > Articles > Options > Editing Layout > "Frontend Images and Links"</p>
         <joomla-field-media class="field-media-wrapper"
           type="image"
           base-path="'.JURI :: root().'"
@@ -1340,6 +1341,10 @@ class PlgEditorSparky extends CMSPlugin
   </div>
 </div>
 
+<script>
+  var joomla_path = "'.JURI :: root().'";
+</script>
+<script src="'.JURI :: root().'media/plg_editors_sparky/js/sparky_editor.js"></script>
 ';
 
 		return $editor;
