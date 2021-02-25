@@ -547,6 +547,7 @@ textarea.sparky_custom_html {
     font-weight: 400;
     line-height: 2.875rem;
     margin-bottom: 0;
+    padding: 0;
 }
 
 /* Modal Body */
@@ -941,4 +942,20 @@ button.choices__button_joomla {
 
 .js-calendar.hidden {
     display: none;
+}
+
+.sparky_modal-body .modal-dialog {
+    max-width: unset;
+}
+
+.sparky_modal-body .modal-dialog .modal-header {
+    padding: 0 15px;
+}
+
+.field-media-wrapper div.input-group {
+    max-width: 600px;
+}
+
+.field-media-wrapper div.input-group input[type="text"] {
+    border-color: #ccc;
 }

@@ -159,6 +159,7 @@ class PlgEditorSparky extends CMSPlugin
 
     $wa->registerAndUseStyle('minicolors', 'vendor/minicolors/jquery.minicolors.css')
        //->registerAndUseStyle('media', 'system/fields/joomla-field-media.min.css')
+       //->registerAndUseStyle('cassiopeia_css', 'templates/cassiopeia/css/template.min.css')
        ->registerAndUseStyle('plg_editors_sparky', 'plg_editors_sparky/sparky_editor.css')
        ->registerAndUseStyle($template, 'templates/'.$template.'/css/editor.css')
        ->registerAndUseScript('jquery', 'vendor/jquery/jquery.min.js')
