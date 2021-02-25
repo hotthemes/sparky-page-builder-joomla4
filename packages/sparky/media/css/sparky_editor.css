@@ -869,6 +869,7 @@ body.com_content section#general .col-lg-9 .card-body {
 .edit form#adminForm #editor > .control-group:first-child,
 .edit form#adminForm #publishing > .control-group,
 .edit form#adminForm #language > .control-group,
+.edit form#adminForm #images > .control-group,
 .edit form#adminForm #metadata > .control-group,
 .edit form#adminForm > .btn-toolbar {
     max-width: 1200px;
