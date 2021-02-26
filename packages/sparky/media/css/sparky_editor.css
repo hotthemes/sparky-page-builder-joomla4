@@ -854,6 +854,10 @@ body.com_content section#general .col-lg-9 .card-body {
     z-index: 9999;
 }
 
+.edit form#adminForm #com-content-form {
+    width: 100vw;
+}
+
 .edit form#adminForm .sparky_page_row:not(.row_full_width) {
     margin: 0 auto;
 }
