@@ -385,7 +385,7 @@ class PlgEditorSparky extends CMSPlugin
         <h3>Column Settings</h3>
       </div>
       <div class="sparky_modal-body">
-        <div>Background Image</div>
+        <div>Background Image:</div>
         <p style="font-size:13px;">To use this in front-end, enable option Content > Articles > Options > Editing Layout > "Frontend Images and Links"</p>
         <joomla-field-media class="field-media-wrapper"
           type="image"
@@ -479,7 +479,7 @@ class PlgEditorSparky extends CMSPlugin
             <input type="text" name="column_padding_left" id="column_padding_left" class="input_inline" size="6" placeholder="Left">
             <input type="text" name="column_padding_right" id="column_padding_right" class="input_inline" size="6" placeholder="Right">
         </label>
-        <label>Vertical align:
+        <label>Vertical Align:
             <select id="column_vertical_align">
                 <option value="">Top</option>
                 <option value="center">Center</option>
@@ -489,6 +489,18 @@ class PlgEditorSparky extends CMSPlugin
                 <option value="space-evenly">Space Evenly</option>
             </select>
         </label>
+        <label></label>
+        <label>Animation Type:
+            <select id="column_animation_type">
+                <option value="">None</option>
+                <option value="grow-in">Grow in</option>
+                <option value="fade-in">Fade in</option>
+                <option value="fade-in-from-left">Fade in from left</option>
+                <option value="fade-in-from-right">Fade in from right</option>
+                <option value="fade-in-from-bottom">Fade in from bottom</option>
+            </select>
+        </label>
+        <label>Animation Delay (ms):<br><input type="text" name="column_animation_delay" id="column_animation_delay" placeholder="ex: 200"></label>
       </div>
       <div class="sparky_modal-footer">
       	<button id="save_column_settings_modal" class="btn btn-primary">Save</button>

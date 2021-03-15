@@ -40,6 +40,7 @@ class plgContentSparkyEditor extends JPlugin
 		// Add assets
 		$wa->registerAndUseStyle('plg_content_sparkyeditor', 'plg_editors_sparky/sparky_frontend.css')
 		   ->registerAndUseScript('plg_content_sparkyeditor', 'plg_editors_sparky/sparky_frontend.js')
+		   ->registerAndUseScript('plg_content_sparkyanimation', 'plg_editors_sparky/sparky_animation.js', [], [], ['jquery'])
 		;
 		
 		// inline style declaration
