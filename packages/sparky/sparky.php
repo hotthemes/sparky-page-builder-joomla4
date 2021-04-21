@@ -119,7 +119,7 @@ class PlgEditorSparky extends CMSPlugin
 
 		// get all Joomla modules
 
-		$db =& JFactory::getDBO();
+		$db = JFactory::getDBO();
 		$query = 'SELECT m.title, m.id
 		          FROM #__modules AS m
 		          WHERE m.published = 1
