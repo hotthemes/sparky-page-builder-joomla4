@@ -965,7 +965,7 @@ button.choices__button_joomla {
 }
 
 .sparky_modal-body .modal-dialog {
-    max-width: unset;
+    width: 100% !important;
 }
 
 .sparky_modal-body .modal-dialog .modal-header {
