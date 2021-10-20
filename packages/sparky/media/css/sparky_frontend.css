@@ -153,6 +153,13 @@ video {
     max-width: 100%;
 }
 
+/* Iframe block */
+
+iframe {
+    max-width: 100%;
+    border: 0;
+}
+
 /* Button block */
 
 .sparky_button {
