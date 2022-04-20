@@ -949,7 +949,7 @@ class PlgEditorSparky extends CMSPlugin
         </label>
         <label>Social Network 1
             <select id="social_network1">
-                <option value="none">None</option>
+                <option value="">None</option>
                 <option value="app-store">Apple App Store</option>
                 <option value="behance">Behance</option>
                 <option value="blogger">Blogger</option>
@@ -993,7 +993,7 @@ class PlgEditorSparky extends CMSPlugin
         <label></label>
         <label>Social Network 2
             <select id="social_network2">
-                <option value="none">None</option>
+                <option value="">None</option>
                 <option value="app-store">Apple App Store</option>
                 <option value="behance">Behance</option>
                 <option value="blogger">Blogger</option>
@@ -1037,7 +1037,7 @@ class PlgEditorSparky extends CMSPlugin
         <label></label>
         <label>Social Network 3
             <select id="social_network3">
-                <option value="none">None</option>
+                <option value="">None</option>
                 <option value="app-store">Apple App Store</option>
                 <option value="behance">Behance</option>
                 <option value="blogger">Blogger</option>
@@ -1081,7 +1081,7 @@ class PlgEditorSparky extends CMSPlugin
         <label></label>
         <label>Social Network 4
             <select id="social_network4">
-                <option value="none">None</option>
+                <option value="">None</option>
                 <option value="app-store">Apple App Store</option>
                 <option value="behance">Behance</option>
                 <option value="blogger">Blogger</option>
@@ -1125,7 +1125,7 @@ class PlgEditorSparky extends CMSPlugin
         <label></label>
         <label>Social Network 5
             <select id="social_network5">
-                <option value="none">None</option>
+                <option value="">None</option>
                 <option value="app-store">Apple App Store</option>
                 <option value="behance">Behance</option>
                 <option value="blogger">Blogger</option>
@@ -1169,7 +1169,7 @@ class PlgEditorSparky extends CMSPlugin
         <label></label>
         <label>Social Network 6
             <select id="social_network6">
-                <option value="none">None</option>
+                <option value="">None</option>
                 <option value="app-store">Apple App Store</option>
                 <option value="behance">Behance</option>
                 <option value="blogger">Blogger</option>
