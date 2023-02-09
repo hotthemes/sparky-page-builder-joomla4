@@ -861,11 +861,13 @@ body.com_content section#general .col-lg-9 .card-body {
 
 .edit form#adminForm {
     width: calc(100vw - var(--scrollbar-width));
-    position: absolute;
+    position: relative;
     overflow: hidden;
     background: #fff;
-    left: 0;
-    top: 0;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
     z-index: 9999;
 }
 
@@ -925,7 +927,7 @@ button.choices__button_joomla {
 
 .edit form#adminForm > div {
     max-width: 1200px;
-    margin: 0 auto 50px !important;
+    margin: 30px auto 50px !important;
 }
 
 .icon-check::before {
