@@ -78,7 +78,7 @@ if (sparkyEditorTextarea.value === "") {
         ||
         !sparkyPageContentParsed.childNodes[0].childNodes[1].childNodes[0].className
         ||
-        !sparkyPageContentParsed.childNodes[0].childNodes[1].childNodes[0].id.startsWith("row_")
+        !sparkyPageContentParsed.childNodes[0].childNodes[1].childNodes[0].className.includes("sparky_row0")
         ||
         !sparkyPageContentParsed.childNodes[0].childNodes[1].childNodes[0].className.includes("sparky_page_row")
     ) {
